@@ -1,6 +1,9 @@
 const express = require("express");
 const morgan = require("morgan");
+const dotenv = require("dotenv");
 const products = require("./data/products");
+
+dotenv.config();
 
 const app = express();
 morgan("tiny");
@@ -19,4 +22,11 @@ app.get("/api/products/:id", (req, res) => {
 	res.json(product);
 });
 
-app.listen(8008, console.log("server ron on 8008"));
+const PORT = process.env.PORT || 8008;
+
+app.listen(
+	PORT,
+	console.log(
+		`Server is running in ${process.env.NODE_ENV} mode on port ${PORT}`
+	)
+);

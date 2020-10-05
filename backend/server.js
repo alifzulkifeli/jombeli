@@ -1,10 +1,9 @@
-const express = require("express");
-const morgan = require("morgan");
-const dotenv = require("dotenv");
-const products = require("./data/products");
+import express from "express";
+import morgan from "morgan";
+import dotenv from "dotenv";
+import products from "./data/products.js";
 
 dotenv.config();
-
 const app = express();
 morgan("tiny");
 

@@ -21,8 +21,10 @@
 	},
 	"homepage": "https://github.com/alifzulkifeli/jombeli#readme",
 	"dependencies": {
+		"colors": "^1.4.0",
 		"dotenv": "^8.2.0",
 		"express": "^4.17.1",
+		"mongoose": "^5.10.8",
 		"morgan": "^1.10.0"
 	},
 	"devDependencies": {

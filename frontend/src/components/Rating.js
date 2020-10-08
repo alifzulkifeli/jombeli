@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 const Rating = ({ value, text, color }) => {
 	return (
-		<div>
+		<>
 			<span>
 				<i
 					style={{ color }}
@@ -65,12 +65,12 @@ const Rating = ({ value, text, color }) => {
 				></i>
 			</span>
 			<span> {text && text}</span>
-		</div>
+		</>
 	);
 };
 
 Rating.propTypes = {
-	value: PropTypes.number.isRequired,
+	value: PropTypes.number,
 	text: PropTypes.string.isRequired,
 	color: PropTypes.string,
 };

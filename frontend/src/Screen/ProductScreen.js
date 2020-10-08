@@ -16,7 +16,7 @@ import Loader from "../components/Loader";
 import Message from "../components/Message";
 
 const ProductScreen = ({ history, match }) => {
-	const [qty, setQty] = useState(0);
+	const [qty, setQty] = useState(1);
 	console.log(qty);
 	const dispatch = useDispatch();
 	const productDetails = useSelector((state) => state.productDetails);
@@ -95,11 +95,13 @@ const ProductScreen = ({ history, match }) => {
 															{x + 1}
 														</option>
 													))}
+													{4}
 												</Form.Control>
 											</Col>
 										</Row>
 									</ListGroup.Item>
 								)}
+
 								<ListGroup.Item>
 									<Button
 										onClick={addToCartHandler}

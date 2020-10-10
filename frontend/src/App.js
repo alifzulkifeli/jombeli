@@ -9,7 +9,7 @@ import CartScreen from "./Screen/CartScreen";
 import LoginScreen from './Screen/LoginScreen'
 import RegisterScreen from './Screen/RegisterScreen'
 import ProfileScreen from './Screen/ProfileScreen'
-import ShippingScreen from './screens/ShippingScreen'
+import ShippingScreen from './Screen/ShippingScreen'
 
 function App() {
 	return (

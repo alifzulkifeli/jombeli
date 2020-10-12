@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { PayPalButton } from 'react-paypal-button-v2'
@@ -9,38 +8,22 @@ import Message from '../components/Message'
 import Loader from '../components/Loader'
 import { getOrderDetails,payOrder  } from '../actions/orderActions'
 import { ORDER_PAY_RESET } from '../constant/orderConstants'
-=======
-import React, { useEffect } from 'react'
-import { Link } from 'react-router-dom'
-import { Button, Row, Col, ListGroup, Image, Card } from 'react-bootstrap'
-import { useDispatch, useSelector } from 'react-redux'
-import Message from '../components/Message'
-import Loader from '../components/Loader'
-import { getOrderDetails } from '../actions/orderActions'
->>>>>>> main
 
 const OrderScreen = ({ match }) => {
   const orderId = match.params.id
 
-<<<<<<< HEAD
 
   const [sdkReady, setSdkReady] = useState(false)
 
 
-=======
->>>>>>> main
   const dispatch = useDispatch()
 
   const orderDetails = useSelector((state) => state.orderDetails)
   const { order, loading, error } = orderDetails
-<<<<<<< HEAD
 
   const orderPay = useSelector((state) => state.orderPay)
   const { loading: loadingPay, success: successPay } = orderPay
 
-=======
-console.log('order', order);
->>>>>>> main
   if (!loading) {
     //   Calculate prices
     const addDecimals = (num) => {
@@ -53,7 +36,6 @@ console.log('order', order);
   }
 
   useEffect(() => {
-<<<<<<< HEAD
 
     const addPayPalScript = async () => {
       const { data: clientId } = await axios.get('/api/config/paypal')
@@ -84,12 +66,6 @@ console.log('order', order);
     console.log(paymentResult);
     dispatch(payOrder(orderId, paymentResult))
   }
-=======
-    if(!order || order._id !== orderId) {
-        dispatch(getOrderDetails(orderId))
-    }
-}, [order, orderId]) 
->>>>>>> main
 
   return loading ? (
     <Loader />
@@ -161,11 +137,7 @@ console.log('order', order);
                           </Link>
                         </Col>
                         <Col md={4}>
-<<<<<<< HEAD
                           {item.qty} x RM{item.price} = RM{item.qty * item.price}
-=======
-                          {item.qty} x ${item.price} = ${item.qty * item.price}
->>>>>>> main
                         </Col>
                       </Row>
                     </ListGroup.Item>
@@ -184,37 +156,24 @@ console.log('order', order);
               <ListGroup.Item>
                 <Row>
                   <Col>Items</Col>
-<<<<<<< HEAD
                   <Col>RM {order.itemsPrice}</Col>
-=======
-                  <Col>${order.itemsPrice}</Col>
->>>>>>> main
                 </Row>
               </ListGroup.Item>
               <ListGroup.Item>
                 <Row>
                   <Col>Shipping</Col>
-<<<<<<< HEAD
                   <Col>RM {order.shippingPrice}</Col>
-=======
-                  <Col>${order.shippingPrice}</Col>
->>>>>>> main
                 </Row>
               </ListGroup.Item>
               <ListGroup.Item>
                 <Row>
                   <Col>Tax</Col>
-<<<<<<< HEAD
                   <Col>RM {order.taxPrice}</Col>
-=======
-                  <Col>${order.taxPrice}</Col>
->>>>>>> main
                 </Row>
               </ListGroup.Item>
               <ListGroup.Item>
                 <Row>
                   <Col>Total</Col>
-<<<<<<< HEAD
                   <Col>RM {order.totalPrice}</Col>
                 </Row>
               </ListGroup.Item>
@@ -231,11 +190,6 @@ console.log('order', order);
                   )}
                 </ListGroup.Item>
               )}
-=======
-                  <Col>${order.totalPrice}</Col>
-                </Row>
-              </ListGroup.Item>
->>>>>>> main
             </ListGroup>
           </Card>
         </Col>

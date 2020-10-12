@@ -94,10 +94,10 @@ const PlaceOrderScreen = ({history}) => {
                         </Col>
                         <Col>
                           <Link to={`/product/${item.product}`}>
-                            {item.name}
+                            {item.name}asd asdas dasdas dasd sadasd
                           </Link>
                         </Col>
-                        <Col md={4}>
+                        <Col md={5}>
                           {item.qty} x RM{item.price} = RM{item.qty * item.price}
                         </Col>
                       </Row>
